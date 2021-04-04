@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo
+  labels:
+    app: mongo-app
+spec:
+  containers:
+    - name: mongo-cont
+      image: mongo
+      env:
+      - name: MONGODB_USER
+        value: user1
+      - name: MONGODB_DATABASE
+        value: User
+      - name: MONGODB_PASS
+        value: pass1
+      ports:
+        - name: web
+          containerPort: 27017
+          protocol: TCP
