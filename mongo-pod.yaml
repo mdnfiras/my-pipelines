@@ -10,11 +10,11 @@ spec:
     - name: mongo-cont
       image: mongo
       env:
-      - name: MONGODB_USER
-        value: user1
-      - name: MONGODB_DATABASE
-        value: User
-      - name: MONGODB_PASS
+      - name: MONGO_INITDB_ROOT_USERNAME
+        value: root1
+      - name: MONGO_INITDB_DATABASE
+        value: users
+      - name: MONGO_INITDB_ROOT_PASSWORD
         value: pass1
       ports:
         - name: web
