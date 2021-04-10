@@ -9,6 +9,7 @@ spec:
   containers:
     - name: angular-cont
       image: mdnfiras/gmc-angular-front:latest
+      imagePullPolicy: Always
       ports:
         - name: angular-port
           containerPort: 80
