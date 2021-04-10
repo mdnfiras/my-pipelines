@@ -4,9 +4,10 @@ metadata:
   name: express-svc
   namespace: web-app
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: express-app 
   ports:
-    - port: 3000
+    - nodePort: 40001
+      port: 3000
       targetPort: 3000
