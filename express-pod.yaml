@@ -9,7 +9,7 @@ spec:
   containers:
     - name: express-cont
       image: mdnfiras/gmc-express-back:latest
-     
+      imagePullPolicy: Always
       ports:
         - name: express-port
           containerPort: 3000 
